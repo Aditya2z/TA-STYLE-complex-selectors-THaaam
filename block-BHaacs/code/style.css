@@ -212,6 +212,7 @@ video {
 
 /* Headings */
 h1 {
+    color: white;
   font-size: 2rem;
   font-weight: 800;
 }
@@ -239,4 +240,83 @@ h3 {
   font-weight: 500;
   padding: 0.5rem 2rem;
   border-radius: 0.25rem;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary);
+    padding: 1rem 0;
+}
+header strong {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}
+header nav a {
+    color: white;
+    font-weight: 500;
+}
+
+/* Main Styles */
+
+/* Hero Section */
+.hero {
+    background-color: var(--primary);
+    text-align: center;
+}
+
+a[href $= "pdf"] {
+ background: url(../assets/pdf.png) no-repeat;
+ background-size: contain;
+ padding-left: 1.5rem; 
+}
+/* Monitor section */
+.monitor .btn1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 2rem;
+    background-color: var(--primary);
+    border-radius: .25rem;
+}
+.monitor .btn1::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 24px solid white;
+    border-bottom: 20px solid transparent;
+    position: relative;
+    left: -32px;
+}
+.monitor .btn1::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 24px solid var(--primary);
+    border-bottom: 20px solid transparent;
+    position: relative;
+    right: -54px;
+}
+
+tr:nth-child(2n) {
+    background-color: var(--secondary);
+}
+.price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.price::before{
+    content: "$ ";
+    font-size: 1.25rem;
+    vertical-align: middle;
+}
+.price::after{
+    content: " /MONTH";
+    font-size: 1rem;
+    color: black;
+    font-weight: 400;
 }
